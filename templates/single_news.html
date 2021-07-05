@@ -1,0 +1,26 @@
+{%extends"client/base.html"%}
+{%block main%}
+<div class="container">
+<div class="row" style="padding: 15px;">
+  <h3>{{yakka_yangilik.title}}</h3>
+
+  <div><span>
+    
+  </span>
+   <span> {% if yakka_yangilik.date_added%}
+    <span style="font-weight: bold;">Sana</span>
+     {{yakka_yangilik.date_added.strftime('%d-%m-%Y,%H:%M')}}
+    {%else%}
+    Sana no'malum
+    {% endif %}
+  </span>
+  </div>
+  <span>
+    
+  </span>
+
+  <p>{{yakka_yangilik.content}}</p>
+</div>
+</div>
+{%endblock%}
+ 
